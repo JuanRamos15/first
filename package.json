@@ -1,0 +1,25 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "description": "proyecto servidor",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "start": "node /."
+  },
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "itgam"
+  ],
+  "author": "@juanramos",
+  "license": "MIT"
+}
