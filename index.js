@@ -9,11 +9,24 @@ global["_dirname"]=path.dirname(new URL(import.meta.url).pathname);
 global["_dirname"]=path.join(_dirname,path.basename(new URL(import.meta.url).pathname));
 // 2. Crear el servidor
 const server = http.createServer( (req, res)=>{
+    res.setHeader('Content.Type','text/html');
     // Toda la logica del server
-    // 1. Respondiendo al cliente
-    res.write("Revisa la consola server ");
-    // 2. Cerrar la conexion
+    ///loggear
     console.log(`client .request: ${req.method}${req.url}`);
+    // 1. Respondiendo al cliente
+    res.write("<html>");
+    res.write("<head>");
+    res.write("<title>My App</title>");
+    res.write("</head>");
+    res.write("<body>");
+    res.write("<h1>Hello from my server...</h1>");
+    res.write("</body>");
+    res.write("</html>");
+    // 2. Cerrar la conexion
+    ///loggear
+    console.log(`contestando: ${req.method}${req.url}`);
+    //cerrando la conexion
+    console.log("Cerrando conexion");
     res.end();
 } );
 
