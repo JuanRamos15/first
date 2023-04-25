@@ -1,7 +1,12 @@
 // 1. Importando el modulo de Node
 // http
 import http from 'http';
+//bibloteca path
+import path from 'path';
 
+//recreando Built-in variables
+global["_dirname"]=path.dirname(new URL(import.meta.url).pathname);
+global["_dirname"]=path.basename(new URL(import.meta.url).pathname);
 // 2. Crear el servidor
  //
 const server = http.createServer( (req, res)=>{
